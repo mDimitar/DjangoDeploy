@@ -20,6 +20,7 @@ from django.contrib.auth.views import LoginView
 from django.urls import path
 from PrototipShopApp import views
 from django.views.generic import RedirectView
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('', views.redirect_to_home, name='root'),
