@@ -24,7 +24,7 @@ from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('', views.redirect_to_home, name='root'),
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls,name='login'),
     path('home/', views.home, name='home'),
     path('add_to_cart/<int:product_id>/', login_required(views.add_to_cart), name='add_to_cart'),
     path('remove_from_cart/<int:product_id>/', login_required(views.remove_from_cart), name='remove_from_cart'),
