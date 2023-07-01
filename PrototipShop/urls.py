@@ -29,7 +29,7 @@ urlpatterns = [
     path('add_to_cart/<int:product_id>/', login_required(views.add_to_cart), name='add_to_cart'),
     path('remove_from_cart/<int:product_id>/', login_required(views.remove_from_cart), name='remove_from_cart'),
     path('cart/', login_required(views.view_cart), name='view_cart'),
-    path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
+    #path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
     path('products/', views.view_all_products, name='view_all_products'),
     path('paymentdetails/', login_required(views.make_payment), name='make_payment'),
     path('paymentsuccess/', login_required(views.simulate_payment), name='simulate_payment'),
