@@ -55,7 +55,7 @@ def redirect_to_home(request):
     if request.user.is_authenticated:
         return redirect('home')
     else:
-        return redirect('login')
+        return redirect('root')
 
 def view_all_products(request):
 
