@@ -6,7 +6,6 @@ from .models import ShoppingCart
 
 # Create your views here.
 def home(request):
-
     if request.user.is_authenticated:
         productsOnFireQuerySet = Product.objects.filter(category__name="Unisex").order_by('?')[:3]
 
