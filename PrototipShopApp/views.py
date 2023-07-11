@@ -68,7 +68,7 @@ def make_payment(request):
 
 def simulate_payment(request):
     cart = get_object_or_404(ShoppingCart, user=request.user)
-    cart.products.all().delete()
+    cart.products.clear()
     return render(request,'simulatepayment.html')
 
 def logout_view(request):
